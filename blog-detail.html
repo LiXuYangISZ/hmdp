@@ -199,7 +199,8 @@
         this.setTransition('none')
       },
       goBack() {
-        history.back();
+        // history.back() 返回上一页时,默认会从浏览器缓存中加载页面,而不是重新请求数据。
+        window.location.href = "/index.html"
       },
       toOtherInfo(){
         if(this.blog.userId === this.user.id){
